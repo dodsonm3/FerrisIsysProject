@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>New Or Delete Or Edit Category </title>
+	<link rel="stylesheet" href="NewOrDeleteOrEditCategory.css"/>
+	<script src="NewOrDeleteOrEditCategory.js"></script>
+</head>
+
+<body>
+	<div class = "navigation">
+		<a class = "active" href = "../index.html">Home</a>
+		<a href = "../Add or Delete Link/AddorDeleteLink.html">Add/Delete/Edit Links</a>
+		<a href = "../New Or Delete Or Edit Category/NewOrDeleteOrEditCategory.html">Create New/Delete/Edit Categories</a>
+		<a href = "../Assign Link To Category/AssignLinkToCategory.html">Assign Link to Category </a>
+		<a href = "../Create New Or Delete User/CreateNewOrDeleteUser.html">Create New User/ Delete User</a>
+		<a href = "../Assign Link to User/AssignLinktoUser.html">Assign / Unassign Link to Users </a>
+	</div>
+	<div id = "Assign">
+		<table class = "outside"> 
+			<tr>
+				<td>
+					<h2>Create Category</h2>
+					<p>Enter The Name Of The Category You Wish To Create</p>
+				</td>
+				<td>
+					<table class = "inside">
+						<tr>
+							<td>Category Name</td>
+						</tr>
+						<tr id = "blank">
+							<td><div contenteditable>&nbsp;</div> </td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<button type="button" onclick="document.getElementById('id01').style.display='block'" class = "button">Create Category</button>
+				</td>
+				<div id="id01" class="modal">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<form class="modal-content" action="/action_page.php">
+					  <div class="container">
+						<h3>Validate Data</h3>
+						<p>Are you sure you want to create category ____?</p>
+				  
+						<div class="clearfix">
+							<button type="button" class="deletebtn">Edit</button>
+							<button  onclick="document.getElementById('id01').style.display='none'" type="button" class="cancelbtn">Cancel</button>
+						</div>
+					  </div>
+					</form>
+				</div>
+			</tr>	
+		</table>
+	</div>
+
+	<div id = "Remove">
+		<table class = "outside">
+			<tr>
+				<td>
+					<h2>Delete Category</h2>
+					<p>Enter The Name Of The Category You Wish To Delete</p>
+				</td>
+				<td>
+					<table class = "inside">
+						<tr>
+							<td>Category Name</td>
+						</tr>
+						<tr id = "blank">
+							<td><div contenteditable>&nbsp;</div> </td>
+						</tr>
+					</table>
+					<p>Warning deleting the category will cause all links in that category to be put into un assigned links </p>
+				</td>
+				<td>
+					<button type="button" onclick="document.getElementById('id02').style.display='block'" class = "button">Delete Category</button>
+				</td>
+					<div id="id02" class="modal">
+						<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+						<form class="modal-content" action="/action_page.php">
+						  <div class="container">
+							<!-- <h3>Validate Data</h3> -->
+							<p>Are you sure you want to delete category ____?</p>
+							<p>Doing this will put all links in that category into the unassigned links category</p>
+							<div class="clearfix">
+								<button type="button" class="deletebtn">Add</button>
+								<button onclick="document.getElementById('id02').style.display='none'" type="button" class="cancelbtn">Cancel</button>
+							</div>
+						  </div>
+						</form>
+					</div>
+				</td>
+			</tr>	
+		</table>
+	</div>
+	<div id = "Edit">
+		<table class = "outside">
+			<tr>
+				<td>
+					<h2>Edit Category</h2>
+					<p>Enter Link That You Would Like To Edit:</p>
+				</td>
+				<td>
+					<table class = "inside">
+						<tr>
+							<td>Category Name</td>
+						</tr>
+						<tr id = "blank">
+							<td><div contenteditable>&nbsp;</div> </td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<button type="button" onclick="document.getElementById('id03').style.display='block'" class = "button">Edit Category</button>
+				</td>
+				<div id="id03" class="modal">
+					<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<form class="modal-content" action="/action_page.php">
+					  <div class="container">
+						<h3>Validate Data</h3>
+						<p>Are you sure you want to edit category ____?</p>
+				  
+						<div class="clearfix">
+							<button type="button" class="deletebtn">Edit</button>
+							<button onclick="document.getElementById('id03').style.display='none'" type="button" class="cancelbtn">Cancel</button>
+						</div>
+					  </div>
+					</form>
+				</div>
+			</tr>	
+		</table>
+	</div>
+	
+</body>
+</html>
